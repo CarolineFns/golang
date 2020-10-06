@@ -1,0 +1,12 @@
+Golang
+
+-> Linguagem da google
+-> Alta performance
+-> Rápida compilação
+-> golang.org
+
+-> sudo tar -C /usr/local -xzf go1.8.3.linux-amd64.tar.gz
+-> export PATH=$PATH:/usr/local/go/bin
+
+-> mkdir pkg src bin
+

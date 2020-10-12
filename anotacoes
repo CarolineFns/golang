@@ -54,3 +54,8 @@ os -> pacote que se comunica com o sistema operacional
 os.Exit(0) -> Encerrando o programa com segurança
 os.Exit(-1) -> Ocorreu um erro na execução
 
+"net/http" -> Pacote que facilita a comunicação com a internet
+
+resp, _ := http.Get(site)
+linha cima retorna a respostam o status do site que se passa no parametro
+_ usa quando vc não vai utilizar algum dos parametros se uma funcao retorna mais de um valor

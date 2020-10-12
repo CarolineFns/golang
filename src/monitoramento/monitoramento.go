@@ -17,6 +17,19 @@ func main() {
 	fmt.Println("0 - Sair do programa")
 
 	var comando int
+	fmt.Println("Digite o comando desejado:")
 	fmt.Scan(&comando)
+
+	if comando == 1 {
+
+	} else if comando == 2 {
+
+	} else if comando == 3 {
+
+	} else {
+		fmt.Println("Comando não reconhecido.")
+		fmt.Println("Digite o comando desejado:")
+		fmt.Scan(&comando)
+	}
 
 }

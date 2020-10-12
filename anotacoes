@@ -26,3 +26,11 @@ fmt.Scanf("%d", &comando)
 fmt.Scan(&comando)
 
 & endereço de memória
+
+if comando == 1 {
+
+} else if comando == 2 {
+
+} else {
+    
+}

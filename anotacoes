@@ -49,3 +49,8 @@ switch comando {
 	default:
 		fmt.Println("Comando não reconhecido.")
 }
+
+os -> pacote que se comunica com o sistema operacional
+os.Exit(0) -> Encerrando o programa com segurança
+os.Exit(-1) -> Ocorreu um erro na execução
+

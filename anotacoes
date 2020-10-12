@@ -10,6 +10,14 @@ Golang
 
 -> mkdir pkg src bin
 
+- pkg -> pacotes compartilhados entre as aplicações
+- src -> código fonte
+- bin -> arquivos binários compilados
+
+go build hello
+./hello
+go run hello
+
 var nome string = "Carol"
 nome := "Carol"
 
@@ -32,5 +40,12 @@ if comando == 1 {
 } else if comando == 2 {
 
 } else {
-    
+
+}
+
+switch comando {
+	case 1:
+		fmt.Println("Monitoramento...")
+	default:
+		fmt.Println("Comando não reconhecido.")
 }

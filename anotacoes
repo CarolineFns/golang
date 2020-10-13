@@ -27,6 +27,7 @@ tipos:
     - string
     - int
     - float32 float64
+    - bool
 
 "reflect" -> reflect.TypeOf(nome))
 
@@ -57,5 +58,27 @@ os.Exit(-1) -> Ocorreu um erro na execução
 "net/http" -> Pacote que facilita a comunicação com a internet
 
 resp, _ := http.Get(site)
+resp.StatusCode == 200
+
 linha cima retorna a respostam o status do site que se passa no parametro
 _ usa quando vc não vai utilizar algum dos parametros se uma funcao retorna mais de um valor
+
+for {
+} roda loop
+
+var sites [4]string
+sites[0] = "https://random-status-code.herokuapp.com/"
+
+array precisa ter tamanho fixo
+slice é um array que não precisa ter tamanho fixo
+nomes := []string{"Douglas", "Daniel", "Bernardo"}
+len(nomes) -> Tamanho do slice
+append(nomes, "Aparecida") -> Pra adicionar mais itens ao slice
+cap(nomes) -> Informa a capacidade do array
+se colocar em um array de 5 + 1 item ele dobra a capacidade pra 10
+
+for _, site := range sites {}
+for i, site := range sites {}
+
+"time"
+time.Sleep(delay * time.Second)

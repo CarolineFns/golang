@@ -91,6 +91,20 @@ arquivo, err := os.Open("sites.txt")
 arquivo, err := ioutil.ReadFile("sites.txt")
 fmt.Println(string(arquivo))
 
+arquivo.Close()
+
 "bufio"
 leitor := bufio.NewReader(arquivo)
 leitor.ReadString('\n')
+
+linha, err := leitor.ReadString('\n')
+linha = strings.TrimSpace(linha) - tira espaços e quebra de linha
+
+fmt.Println(linha)
+
+EOF -> End of File
+if err == io.EOF {
+    break
+}
+
+sites = append(sites, linha)

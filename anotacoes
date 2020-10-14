@@ -82,3 +82,5 @@ for i, site := range sites {}
 
 "time"
 time.Sleep(delay * time.Second)
+
+nil -> null

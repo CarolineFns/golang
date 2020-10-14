@@ -62,11 +62,12 @@ func leComando() int {
 func iniciarMonitoramento() {
 	fmt.Println("Monitoramento...")
 
-	sites := []string{
-		"https://random-status-code.herokuapp.com/",
-		"https://alura.com.br/",
-		"https://google.com.br/",
-		"http://facebook.com.br/"}
+	// sites := []string{
+	// 	"https://random-status-code.herokuapp.com/",
+	// 	"https://alura.com.br/",
+	// 	"https://google.com.br/",
+	// 	"http://facebook.com.br/"}
+	sites := leSitesDoArquivo()
 
 	for i := 0; i < monitoramento; i++ {
 		for i, site := range sites {
@@ -89,4 +90,14 @@ func testaSite(site string) {
 	} else {
 		fmt.Println("Site:", site, "está com problemas. Status Code:", resp.StatusCode)
 	}
+}
+
+func leSitesDoArquivo() []string {
+
+	var sites []string
+
+	arquivo, _ := os.Open("sites.txt")
+	fmt.Println(arquivo)
+
+	return sites
 }

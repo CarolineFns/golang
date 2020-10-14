@@ -84,3 +84,13 @@ for i, site := range sites {}
 time.Sleep(delay * time.Second)
 
 nil -> null
+
+"io/ioutil"
+arquivo, err := os.Open("sites.txt")
+
+arquivo, err := ioutil.ReadFile("sites.txt")
+fmt.Println(string(arquivo))
+
+"bufio"
+leitor := bufio.NewReader(arquivo)
+leitor.ReadString('\n')

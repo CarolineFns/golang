@@ -1,6 +1,7 @@
 package main
 
 import (
+	"bufio"
 	"fmt"
 	"net/http"
 	"os"
@@ -62,11 +63,6 @@ func leComando() int {
 func iniciarMonitoramento() {
 	fmt.Println("Monitoramento...")
 
-	// sites := []string{
-	// 	"https://random-status-code.herokuapp.com/",
-	// 	"https://alura.com.br/",
-	// 	"https://google.com.br/",
-	// 	"http://facebook.com.br/"}
 	sites := leSitesDoArquivo()
 
 	for i := 0; i < monitoramento; i++ {
@@ -106,7 +102,14 @@ func leSitesDoArquivo() []string {
 		fmt.Println("Ocorreu um erro: ", err)
 	}
 
-	fmt.Println(arquivo)
+	leitor := bufio.NewReader(arquivo)
+	linha, err := leitor.ReadString('\n')
+
+	if err != nil {
+		fmt.Println("Ocorreu um erro: ", err)
+	}
+
+	fmt.Println(linha)
 
 	return sites
 }

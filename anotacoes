@@ -87,6 +87,9 @@ nil -> null
 
 "io/ioutil"
 arquivo, err := os.Open("sites.txt")
+arquivo, err := ioutil.ReadFile("log.txt")
+quando usa o ioutil não precisa dar o close file pq ele ja faz isso, 
+diferente do os que é mais de baixo nivel
 
 abre o arquivo mas permite parametros a mais, como permissão, criar o arquivo se não existir etc
 arquivo, err := os.OpenFile("log.txt", os.O_RDWR|os.O_CREATE|os.O_APPEND, 0666)

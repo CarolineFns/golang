@@ -88,6 +88,15 @@ nil -> null
 "io/ioutil"
 arquivo, err := os.Open("sites.txt")
 
+abre o arquivo mas permite parametros a mais, como permissão, criar o arquivo se não existir etc
+arquivo, err := os.OpenFile("log.txt", os.O_RDWR|os.O_CREATE|os.O_APPEND, 0666)
+O_RDWR -> ler ou escrever
+O_CREATE -> cria o arquivo se não existir
+O_APPEND -> adiciona no final do arquivo a nova string passada
+0666 -> permissao do os
+
+arquivo.WriteString() -> para escrever no arquivo
+
 arquivo, err := ioutil.ReadFile("sites.txt")
 fmt.Println(string(arquivo))
 
@@ -108,3 +117,11 @@ if err == io.EOF {
 }
 
 sites = append(sites, linha)
+
+"strconv" -> pacote para converter os tipos em string
+strconv.FormatBool(status)
+
+pega a hora de agora e coloca no formato passado
+obs: esse formato precisa olhar os numeros correspondentes na documentacao do formate time do golang
+time.Now().Format("02/01/2006 15:04:05")
+
